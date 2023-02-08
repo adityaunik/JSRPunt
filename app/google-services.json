@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "534957054484",
+    "project_id": "jsrpunt",
+    "storage_bucket": "jsrpunt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534957054484:android:3ad39d65d7a89132916501",
+        "android_client_info": {
+          "package_name": "com.aditya.jsrpunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534957054484-pgv0fe3386fkne2du074t8gr0lf6i8qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfgJtyEJn2G7GghkUlBfU4l0vAt3oEdvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534957054484-pgv0fe3386fkne2du074t8gr0lf6i8qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

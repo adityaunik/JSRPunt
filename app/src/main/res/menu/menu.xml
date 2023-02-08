@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <item
+       android:id="@+id/home"
+       android:title="Home"
+       android:icon="@drawable/home_icon"
+       android:checked="true"/>
+
+    <item
+        android:id="@+id/transaction"
+        android:title="Transactions"
+        android:icon="@drawable/transaction_icon"/>
+
+    <item
+        android:id="@+id/id"
+        android:title="IDs"
+        android:icon="@drawable/id_icon"/>
+
+
+</menu>
