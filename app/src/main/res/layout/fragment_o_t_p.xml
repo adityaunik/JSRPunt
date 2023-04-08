@@ -7,13 +7,47 @@
     android:background="#DBDEE1"
     tools:context=".OTPFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingHorizontal="35dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="35dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar_otp"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateTint="#3AB0FF"
+                android:indeterminateTintMode="src_atop"
+                android:progressTint="#3AB0FF"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_bg"
         android:elevation="10dp"
+        android:background="@drawable/custom_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,15 +55,28 @@
         app:layout_constraintVertical_bias="0.744">
 
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_width="200dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/lottie_enter_number" />
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/linearLayoutCompat4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="44dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView">
 
             <TextView
                 android:id="@+id/txt"
@@ -37,89 +84,59 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginEnd="60dp"
-                android:paddingEnd="60dp"
-                android:text="Login With OTP"
-                android:textColor="#040404"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#5E5D5D"
+                android:text="Enter Verification Code sent to entered mobile number"
+                android:textSize="19sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.248"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <EditText
-            android:id="@+id/txt_phone"
+            android:id="@+id/edt_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:hint="Enter Number"
-            android:inputType="phone"
-            android:padding="10dp"
-            android:paddingStart="30dp"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4" />
-
-        <EditText
-            android:id="@+id/txt_otp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:ems="11"
             android:fontFamily="sans-serif-black"
             android:hint="Enter OTP"
+            android:textColorHint="#3B90A5"
+            android:textColor="#7E7C7C"
+            android:gravity="center"
             android:inputType="numberSigned"
-            android:padding="10dp"
-            android:paddingStart="30dp"
+            android:padding="12dp"
             android:textSize="19sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_login_with_otp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login_with_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/custom_button"
             android:backgroundTint="#3AB0FF"
             android:paddingStart="84dp"
             android:paddingEnd="84dp"
-            android:text="login"
+            android:layout_marginTop="70dp"
+            android:textColor="#000"
+            android:text="verify"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.536"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_send_otp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="120dp"
-            android:background="@drawable/custom_button"
-            android:backgroundTint="#3AB0FF"
-            android:paddingStart="70dp"
-            android:paddingEnd="70dp"
-            android:text="Send OTP"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_otp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_phone"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/edt_otp"
+            app:layout_constraintVertical_bias="0.91" />
 
         <TextView
+            android:id="@+id/txt_resend_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -128,11 +145,12 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.224"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_send_otp" />
+            app:layout_constraintTop_toBottomOf="@+id/edt_otp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

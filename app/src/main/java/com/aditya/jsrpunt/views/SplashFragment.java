@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 
 import com.aditya.jsrpunt.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class SplashFragment extends Fragment {
@@ -23,6 +25,8 @@ public class SplashFragment extends Fragment {
     NavController navController;
     NavHostFragment navHostFragment;
     DrawerLayout drawerLayout;
+    FirebaseAuth mAuth;
+    FirebaseUser user;
 
     public SplashFragment() {
         // Required empty public constructor
@@ -42,16 +46,29 @@ public class SplashFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_splash, container, false);
         navHostFragment = (NavHostFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        assert navHostFragment != null;
         navController = navHostFragment.getNavController();
         drawerLayout = view.findViewById(R.id.drawer);
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+
+        if(user != null){
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    navController.navigate(R.id.action_splashFragment_to_home);
+                }
+            },2500);
+        }else{
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    navController.navigate(R.id.action_splashFragment_to_loginFragment);
+                }
+            },2500);
+        }
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                navController.navigate(R.id.action_splashFragment_to_loginFragment);
-            }
-        },3000);
 
         return view;
     }

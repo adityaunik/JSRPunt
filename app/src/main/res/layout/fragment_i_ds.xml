@@ -4,27 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.IDsFragment">
+    tools:context=".views.IDsFragment"
+    android:background="#C4CFD5">
 
-       <androidx.viewpager.widget.ViewPager
-       android:id="@+id/view_pager"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-           <com.google.android.material.tabs.TabLayout
-               android:id="@+id/tab_layout"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:background="@drawable/custom_tablayout"
-               android:backgroundTint="#3AB0FF"
-               app:tabIndicatorHeight="0dp"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent"
-               app:tabSelectedTextColor="#000000"
-               app:tabTextColor="#FFFFFF"
-               />
-       </androidx.viewpager.widget.ViewPager>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_tablayout"
+            android:backgroundTint="#3AB0FF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="#000000"
+            app:tabTextColor="#FFFFFF" />
+    </androidx.viewpager.widget.ViewPager>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

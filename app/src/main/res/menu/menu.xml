@@ -13,9 +13,10 @@
         android:icon="@drawable/transaction_icon"/>
 
     <item
-        android:id="@+id/id"
-        android:title="IDs"
-        android:icon="@drawable/id_icon"/>
+    android:id="@+id/id"
+    android:title="IDs"
+    android:icon="@drawable/id_icon"/>
+
 
 
 </menu>

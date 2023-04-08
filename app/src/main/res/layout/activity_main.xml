@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        app:menu="@menu/menu"
+        app:menu="@menu/menu_1"
         app:itemTextColor="@color/bottom_nav_color"
         app:itemIconTint="@color/bottom_nav_color"
         app:headerLayout="@layout/header"

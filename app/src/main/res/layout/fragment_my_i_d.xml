@@ -3,9 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.MyIDFragment"
-    android:background="#CF4141">
+    android:background="#C4CFD5"
+    android:paddingTop="10dp">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_view_my_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
 </FrameLayout>

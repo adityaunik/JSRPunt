@@ -7,190 +7,244 @@
     android:background="#DBDEE1"
     tools:context=".RegisterFragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_bg"
-        android:elevation="10dp"
+        android:scrollbarSize="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744">
+        app:layout_constraintVertical_bias="0.9">
 
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/custom_button"
-            android:backgroundTint="#3AB0FF"
-            android:paddingStart="75dp"
-            android:paddingEnd="75dp"
-            android:padding="6dp"
-            android:text="register"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/appCompatButton3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.546"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:background="@drawable/custom_button"
-            android:backgroundTint="#3AB0FF"
-            android:drawableStart="@drawable/icon_google"
-            android:paddingStart="50dp"
-            android:paddingEnd="60dp"
-            android:padding="6dp"
-            android:scaleType="fitStart"
-            android:text="  Signup"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.543"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:layout_marginBottom="70dp"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:hint="Enter Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:paddingStart="30dp"
-            android:textSize="19sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_register"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="60dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Create Account"
-                android:paddingEnd="60dp"
-                android:textColor="#000"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                />
-
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <EditText
-            android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:hint="Enter Email"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:paddingStart="30dp"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="45dp"
             android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.589"
-            app:layout_constraintStart_toStartOf="parent">
+            android:paddingBottom="30dp">
 
-            <TextView
-                android:id="@+id/textView4"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already have an account?"
-                android:textColor="#616060"
-                android:textSize="18sp"
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/custom_bg"
+                android:elevation="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/txt_goto_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Login"
-                android:textColor="#3AB0FF"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView4" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <EditText
-            android:id="@+id/editTextPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:hint="Enter Number"
-            android:inputType="phone"
-            android:padding="10dp"
-            android:paddingStart="30dp"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:inputType="textPersonName"
-            android:padding="10dp"
-            android:paddingStart="30dp"
-            android:hint="Enter Name"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
+                <ProgressBar
+                    android:id="@+id/progressBar_register"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTint="#3AB0FF"
+                    android:indeterminateTintMode="src_atop"
+                    android:progressTint="#3AB0FF"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="#3AB0FF"
+                    android:padding="15dp"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="60dp"
+                    android:textColor="#000"
+                    android:text="register"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_google_signup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_google_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="#3AB0FF"
+                    android:drawableStart="@drawable/icon_google"
+                    android:padding="6dp"
+                    android:textColor="#000"
+                    android:paddingStart="35dp"
+                    android:paddingEnd="45dp"
+                    android:scaleType="fitStart"
+                    android:text="  Signup"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/edt_pass_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="70dp"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:ems="11"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="   Enter Password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#3B90A5"
+                    android:textColor="#7E7C7C"
+                    android:padding="12dp"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_email_register"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="65dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="60dp"
+                        android:text="Create Account"
+                        android:textColor="#000"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <EditText
+                    android:id="@+id/edt_email_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:ems="11"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="   Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#3B90A5"
+                    android:textColor="#7E7C7C"
+                    android:padding="12dp"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat8" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already have an account?"
+                        android:textColor="#616060"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_goto_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Login"
+                        android:textColor="#3AB0FF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView4" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/bg_edittext_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_name_register">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp_register"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/edt_phone_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone"
+                        android:padding="6dp"
+                        android:textSize="19sp"
+                        android:hint="  Enter Phone"
+                        android:textColorHint="#3B90A5"
+                        android:textColor="#7E7C7C"
+                        android:ems="8"
+                        android:fontFamily="sans-serif-black"
+                        android:background="@drawable/bg_edittext_normal"
+                        android:paddingStart="4dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <EditText
+                    android:id="@+id/edt_name_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:ems="11"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="   Enter Name"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#3B90A5"
+                    android:textColor="#7E7C7C"
+                    android:padding="12dp"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

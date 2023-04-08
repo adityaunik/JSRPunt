@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">JSRPunt</string>
+    <string name="app_name">JSR Punt</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="OpenDrawer">Open navigation drawer</string>
     <string name="CloseDrawer">Close navigation drawer</string>
+    <string name="content">Get your queries new updates and latest offers via whatsapp support.</string>
+    <string name="web_client_id">534957054484-ppg248345qnd23i30phm5np5n9d24a32.apps.googleusercontent.com</string>
+    <string name="content1">Terms and Conditions agreements act as a legal contract between JSRPunt and the user who access your website and mobile app.\n\nYou agree that by accessing the App, you have read, understood, and agree to be bound by all of these Terms and Conditions.If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the App.\n\nYou will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms and Conditions by your continued use of the Site after the date such revised Terms and Conditions are posted.\n\n\n&#8226; JSRPunt is intended for users who are at least 18 years old. Person under the age of 18 is not permitted to register for the App.\n\n&#8226; All the registration information you submit will be true, accurate, current, and complete.\n\n&#8226; You will not use the App for any illegal or unauthorized purpose.\n\n&#8226; Your use of the App will not violate any applicable law or regulation.\n\n\nIf you provide any information that is untrue, inaccurate, not current, or incomplete. we have the right to suspend or terminate your account and refuse any and all or future use of the App (or any portion thereof ).
+
+    </string>
 </resources>
